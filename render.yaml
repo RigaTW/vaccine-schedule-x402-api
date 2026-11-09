@@ -1,0 +1,15 @@
+# Render Blueprint — 台灣寶寶疫苗時程查詢 x402 API
+# 用法：把 vaccine-api/ 推到一個 Git repo，在 Render 選 New > Blueprint，
+# 選那個 repo 就好，不用手動填 Start Command。
+# 免費試用版：不設 CDP 變數時，預設用公開 facilitator（x402.org），
+# 10 次免費試用照常，第 11 次回 402；但 Base 主網 USDC 還收不到，
+# 要收主網 USDC 時再到 Render Dashboard 補 FACILITATOR_URL + CDP_API_KEY_ID + CDP_API_KEY_SECRET。
+services:
+  - type: web
+    name: vaccine-schedule-x402-api
+    env: node
+    plan: free
+    startCommand: node server.js
+    envVars:
+      - key: FACILITATOR_URL
+        value: https://x402.org/facilitator
