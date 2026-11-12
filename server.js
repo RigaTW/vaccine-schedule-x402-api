@@ -182,7 +182,7 @@ function paymentRequirements() {
     asset: ASSET_USDC_BASE,
     payTo: PAY_TO,
     maxTimeoutSeconds: 60,
-    extra: { name: 'USDC', version: '2' },
+    extra: { name: 'USD Coin', version: '2' },
   };
 }
 
